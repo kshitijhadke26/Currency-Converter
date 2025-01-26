@@ -1,37 +1,52 @@
 # Currency Converter Application
-This application is a web-based currency converter that allows users to calculate the exchange rate between two selected currencies. It is designed with an intuitive interface and provides real-time conversion rates. Here's a detailed breakdown of its functionality:
 
-#### Key Features:
-1. **Currency Selection**:
-   - Users can select "From" and "To" currencies from dropdown menus populated with currency codes.
-   - The dropdowns are dynamically populated from a predefined list of currency codes (`Country_List`), with flags displayed for each selected currency.
+This is a simple web-based currency converter application that allows users to convert amounts between various currencies. It dynamically fetches exchange rates and displays the equivalent amount in the selected currency.
 
-2. **Real-Time Exchange Rates**:
-   - The application fetches the latest exchange rates from the ExchangeRate API using the base currency selected by the user.
-   - It calculates and displays the equivalent value in the target currency based on the input amount.
+## Features
+- Convert currencies using real-time exchange rates.
+- Support for multiple currencies with corresponding flags.
+- Swap functionality to reverse the selected currencies.
+- User-friendly interface.
 
-3. **Interactive Elements**:
-   - Users can reverse the "From" and "To" currencies by clicking the reverse icon.
-   - The application updates the flags and recalculates the exchange rate upon reversal.
+## Technologies Used
+- **HTML**: Structure of the web page.
+- **CSS**: Styling for a modern and clean user interface.
+- **JavaScript**: Fetching exchange rates and dynamic functionality.
+- **Exchange Rate API**: Fetching live exchange rates.
 
-4. **Automatic Updates**:
-   - The application fetches and displays the exchange rate as soon as the page loads or when a new conversion is initiated.
+## Getting Started
 
-5. **Error Handling**:
-   - Displays meaningful messages if there are issues fetching the exchange rate, such as network errors or unavailable rates for the selected currencies.
+### Prerequisites
+- A modern web browser.
+- API key from [ExchangeRate-API](https://www.exchangerate-api.com/).
 
-#### How It Works:
-1. **User Input**:
-   - The user enters the amount to convert and selects the desired currencies.
-2. **API Integration**:
-   - The application sends a request to the ExchangeRate API to retrieve real-time conversion rates.
-3. **Display Results**:
-   - The result of the conversion is shown in a readable format, such as `1 USD = 0.75 GBP`.
+### Installation
+1. Clone the repository or download the source code.
+   ```bash
+   git clone https://github.com/kshitijhadke26/Currency-Converter.git
+   ```
+2. Replace `YOUR_API_KEY` in the JavaScript file (`index.js`) with your actual API key.
+3. Open the `index.html` file in a browser to use the application.
 
-#### Technologies Used:
-- **HTML**: For structuring the interface.
-- **CSS**: To style the application and enhance the user experience.
-- **JavaScript**: To manage interactivity, API calls, and dynamic updates to the interface.
-- **ExchangeRate API**: Provides real-time currency exchange data.
+### File Structure
+```
+project-folder/
+├── index.html       # Main HTML file
+├── style.css        # Styling for the application
+├── index.js         # JavaScript for functionality
+├── countries.js     # List of supported currencies and their flags
+```
 
-This application is suitable for individuals or businesses needing quick and reliable currency conversion.
+## How to Use
+1. Open the application in a web browser.
+2. Enter the amount you want to convert.
+3. Select the currencies from the dropdown menus ("From" and "To").
+4. Click the "Get Exchange Rate" button to view the converted amount.
+5. Use the swap icon to reverse the selected currencies.
+
+## Screenshots
+![App Screenshot](image.png)
+
+## Acknowledgments
+- [ExchangeRate-API](https://www.exchangerate-api.com/) for providing real-time exchange rates.
+- [FlagCDN](https://flagcdn.com/) for country flag images.
