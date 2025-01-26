@@ -6,7 +6,6 @@ This is a simple web-based currency converter application that allows users to c
 - Convert currencies using real-time exchange rates.
 - Support for multiple currencies with corresponding flags.
 - Swap functionality to reverse the selected currencies.
-- User-friendly interface.
 
 ## Technologies Used
 - **HTML**: Structure of the web page.
