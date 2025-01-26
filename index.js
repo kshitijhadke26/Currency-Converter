@@ -8,7 +8,7 @@ const exRateTxt = document.querySelector("form .result");
 // Event listener for currency dropdowns (select)
 [fromCur, toCur].forEach((select, i) => {
     for (let curCode in Country_List) {
-        const selected = (i === 0 && curCode === "USD") || (i === 1 && curCode === "INR") ? "selected" : "";
+        const selected = (i === 0 && curCode === "USD") || (i === 1 && curCode === "GBP") ? "selected" : "";
         select.insertAdjacentHTML("beforeend", `<option value="${curCode}" ${selected}>${curCode}</option>`);
     }
     select.addEventListener("change", () => {
@@ -25,7 +25,7 @@ async function getExchangeRate() {
     const amountVal = amount.value || 1;
     exRateTxt.innerText = "Getting exchange rate...";
     try {
-        const response = await fetch(`https://v6.exchangerate-api.com/v6/57c3de63045f34e654ca973b/latest/${fromCur.value}`);
+        const response = await fetch(`https://v6.exchangerate-api.com/v6/YOUR_API_KEY/latest/${fromCur.value}`);
         if (!response.ok) throw new Error("Failed to fetch exchange rate");
         const result = await response.json();
         const exchangeRate = result.conversion_rates[toCur.value];
